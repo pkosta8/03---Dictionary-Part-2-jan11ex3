@@ -1,0 +1,1285 @@
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (8.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (8.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateEntries (20171115203312)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "entries" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "word" varchar, "definition" text, "language" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171115203312"]]
+  [1m[35m (23.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-01-11 21:57:32.173432"], ["updated_at", "2018-01-11 21:57:32.173432"]]
+  [1m[35m (17.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mEntry Load (0.2ms)[0m  [1m[34mSELECT "entries".* FROM "entries"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "absolute music"], ["definition", "instrumental music not intended to represent or illustrate something else."], ["language", "en"], ["created_at", "2018-01-11 21:57:43.423549"], ["updated_at", "2018-01-11 21:57:43.423549"]]
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "a cappella"], ["definition", "(with reference to choral music) sung without instrumental accompaniment"], ["language", "en"], ["created_at", "2018-01-11 21:57:43.433254"], ["updated_at", "2018-01-11 21:57:43.433254"]]
+  [1m[35m (5.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "acciaccatura"], ["definition", "a grace note performed as quickly as possible before an essential note of a melody."], ["language", "en"], ["created_at", "2018-01-11 21:57:43.442884"], ["updated_at", "2018-01-11 21:57:43.442884"]]
+  [1m[35m (19.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "accompaniment"], ["definition", "a musical part which supports or partners an instrument, voice, or group"], ["language", "en"], ["created_at", "2018-01-11 21:57:43.466524"], ["updated_at", "2018-01-11 21:57:43.466524"]]
+  [1m[35m (17.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "accompanist"], ["definition", "a person who provides a musical accompaniment to another musician or to a singer."], ["language", "en"], ["created_at", "2018-01-11 21:57:43.487539"], ["updated_at", "2018-01-11 21:57:43.487539"]]
+  [1m[35m (15.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "account"], ["definition", "a report or description of an event or experience"], ["language", "en"], ["created_at", "2018-01-11 21:57:43.506425"], ["updated_at", "2018-01-11 21:57:43.506425"]]
+  [1m[35m (7.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "aeolian mode"], ["definition", "the mode represented by the natural diatonic scale A–A (containing a minor 3rd, 6th, and 7th)."], ["language", "en"], ["created_at", "2018-01-11 21:57:43.515714"], ["updated_at", "2018-01-11 21:57:43.515714"]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "aerophone"], ["definition", "a wind instrument."], ["language", "en"], ["created_at", "2018-01-11 21:57:43.527335"], ["updated_at", "2018-01-11 21:57:43.527335"]]
+  [1m[35m (14.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "afrofuturism"], ["definition", "a movement in literature, music, art, etc., featuring futuristic or science fiction themes which incorporate elements of black history and culture"], ["language", "en"], ["created_at", "2018-01-11 21:57:43.543841"], ["updated_at", "2018-01-11 21:57:43.543841"]]
+  [1m[35m (18.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "agogic"], ["definition", "relating to or denoting accentuation within musical phrases by slight lengthening of notes."], ["language", "en"], ["created_at", "2018-01-11 21:57:43.568354"], ["updated_at", "2018-01-11 21:57:43.568354"]]
+  [1m[35m (14.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "alap"], ["definition", "(in Indian music) the improvised section of a raga, forming a prologue to the formal expression."], ["language", "en"], ["created_at", "2018-01-11 21:57:43.586751"], ["updated_at", "2018-01-11 21:57:43.586751"]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "aleatory"], ["definition", "depending on the throw of a dice or on chance; random."], ["language", "en"], ["created_at", "2018-01-11 21:57:43.595109"], ["updated_at", "2018-01-11 21:57:43.595109"]]
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "alla breve"], ["definition", "a time signature indicating two or four minim beats in a bar."], ["language", "en"], ["created_at", "2018-01-11 21:57:43.602570"], ["updated_at", "2018-01-11 21:57:43.602570"]]
+  [1m[35m (13.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "allemande"], ["definition", "any of a number of German dances, in particular an elaborate court dance popular in the 16th century."], ["language", "en"], ["created_at", "2018-01-11 21:57:43.624930"], ["updated_at", "2018-01-11 21:57:43.624930"]]
+  [1m[35m (18.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "altissimo"], ["definition", "very high in pitch"], ["language", "en"], ["created_at", "2018-01-11 21:57:43.645586"], ["updated_at", "2018-01-11 21:57:43.645586"]]
+  [1m[35m (15.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "alto"], ["definition", "(especially in church music) the highest adult male singing voice (sometimes distinguished from the countertenor voice as using falsetto)."], ["language", "en"], ["created_at", "2018-01-11 21:57:43.662646"], ["updated_at", "2018-01-11 21:57:43.662646"]]
+  [1m[35m (8.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "alto clef"], ["definition", "a clef placing middle C on the middle line of the stave, used chiefly for viola music."], ["language", "en"], ["created_at", "2018-01-11 21:57:43.672384"], ["updated_at", "2018-01-11 21:57:43.672384"]]
+  [1m[35m (6.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "altoist"], ["definition", "a person who plays an alto instrument, in particular a saxophone."], ["language", "en"], ["created_at", "2018-01-11 21:57:43.680290"], ["updated_at", "2018-01-11 21:57:43.680290"]]
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "amati"], ["definition", "a family of Italian violin-makers from Cremona. In the 16th and 17th centuries three generations of the Amatis developed the basic proportions of the violin, viola, and cello."], ["language", "en"], ["created_at", "2018-01-11 21:57:43.687707"], ["updated_at", "2018-01-11 21:57:43.687707"]]
+  [1m[35m (23.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "anderson, marian"], ["definition", "(1897–1993), American operatic contralto. In 1955 she became the first black singer to perform at the New York Metropolitan Opera."], ["language", "en"], ["created_at", "2018-01-11 21:57:43.713479"], ["updated_at", "2018-01-11 21:57:43.713479"]]
+  [1m[35m (34.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "anglican chant"], ["definition", "a method of singing unmetrical psalms and canticles to short harmonized melodies, the first note being extended to accommodate as many syllables as necessary."], ["language", "en"], ["created_at", "2018-01-11 21:57:43.752569"], ["updated_at", "2018-01-11 21:57:43.752569"]]
+  [1m[35m (13.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "anthemic"], ["definition", "(of a song) like an anthem in being rousing or uplifting"], ["language", "en"], ["created_at", "2018-01-11 21:57:43.769060"], ["updated_at", "2018-01-11 21:57:43.769060"]]
+  [1m[35m (6.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "anticipation"], ["definition", "the action of anticipating something; expectation or prediction"], ["language", "en"], ["created_at", "2018-01-11 21:57:43.776653"], ["updated_at", "2018-01-11 21:57:43.776653"]]
+  [1m[35m (5.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "antiphonal"], ["definition", "(of music, especially church music, or a section of a church liturgy) sung, recited, or played alternately by two groups."], ["language", "en"], ["created_at", "2018-01-11 21:57:43.783222"], ["updated_at", "2018-01-11 21:57:43.783222"]]
+  [1m[35m (18.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "antiphonary"], ["definition", "(in the Western Christian Church) a book of plainsong for the Divine Office."], ["language", "en"], ["created_at", "2018-01-11 21:57:43.803575"], ["updated_at", "2018-01-11 21:57:43.803575"]]
+  [1m[35m (18.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "antiphony"], ["definition", "antiphonal singing, playing, or chanting."], ["language", "en"], ["created_at", "2018-01-11 21:57:43.824508"], ["updated_at", "2018-01-11 21:57:43.824508"]]
+  [1m[35m (15.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "appoggiatura"], ["definition", "a grace note which delays the next note of the melody, taking half or more of its written time value."], ["language", "en"], ["created_at", "2018-01-11 21:57:43.851611"], ["updated_at", "2018-01-11 21:57:43.851611"]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "aria"], ["definition", "a long accompanied song for a solo voice, typically one in an opera or oratorio."], ["language", "en"], ["created_at", "2018-01-11 21:57:43.859915"], ["updated_at", "2018-01-11 21:57:43.859915"]]
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "arioso"], ["definition", "(especially in opera and oratorio) vocal music that is more melodic than recitative but less formal than an aria"], ["language", "en"], ["created_at", "2018-01-11 21:57:43.867194"], ["updated_at", "2018-01-11 21:57:43.867194"]]
+  [1m[35m (8.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "arpeggiate"], ["definition", "play (a chord) as a series of ascending or descending notes"], ["language", "en"], ["created_at", "2018-01-11 21:57:43.882431"], ["updated_at", "2018-01-11 21:57:43.882431"]]
+  [1m[35m (24.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "arpeggio"], ["definition", "the notes of a chord played in rapid succession, either ascending or descending."], ["language", "en"], ["created_at", "2018-01-11 21:57:43.922340"], ["updated_at", "2018-01-11 21:57:43.922340"]]
+  [1m[35m (15.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "arr."], ["definition", "(of a piece of music) arranged by"], ["language", "en"], ["created_at", "2018-01-11 21:57:43.943927"], ["updated_at", "2018-01-11 21:57:43.943927"]]
+  [1m[35m (7.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "arranger"], ["definition", "a person who adapts a musical composition for performance"], ["language", "en"], ["created_at", "2018-01-11 21:57:43.957717"], ["updated_at", "2018-01-11 21:57:43.957717"]]
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "ashkenazy, vladimir"], ["definition", "(born 1937), Russian-born pianist; full name Vladimir Davidovich Ashkenazy. A child prodigy, he left the Soviet Union in 1963, finally settling in Iceland in 1973."], ["language", "en"], ["created_at", "2018-01-11 21:57:43.966365"], ["updated_at", "2018-01-11 21:57:43.966365"]]
+  [1m[35m (5.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "athematic"], ["definition", "(of a composition) not based on the use of themes."], ["language", "en"], ["created_at", "2018-01-11 21:57:43.980500"], ["updated_at", "2018-01-11 21:57:43.980500"]]
+  [1m[35m (19.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "atonal"], ["definition", "not written in any key or mode"], ["language", "en"], ["created_at", "2018-01-11 21:57:44.004005"], ["updated_at", "2018-01-11 21:57:44.004005"]]
+  [1m[35m (16.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "attune"], ["definition", "make receptive or aware"], ["language", "en"], ["created_at", "2018-01-11 21:57:44.024092"], ["updated_at", "2018-01-11 21:57:44.024092"]]
+  [1m[35m (14.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "aubade"], ["definition", "a poem or piece of music appropriate to the dawn or early morning."], ["language", "en"], ["created_at", "2018-01-11 21:57:44.046166"], ["updated_at", "2018-01-11 21:57:44.046166"]]
+  [1m[35m (6.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "augmentation"], ["definition", "the action or process of making or becoming greater in size or amount"], ["language", "en"], ["created_at", "2018-01-11 21:57:44.056114"], ["updated_at", "2018-01-11 21:57:44.056114"]]
+  [1m[35m (5.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "autotune"], ["definition", "a device or facility for tuning something automatically, especially a computer program which enables the correction of an out-of-tune vocal performance."], ["language", "en"], ["created_at", "2018-01-11 21:57:44.064315"], ["updated_at", "2018-01-11 21:57:44.064315"]]
+  [1m[35m (17.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "back catalogue"], ["definition", "all the works previously produced by a recording artist or record company"], ["language", "en"], ["created_at", "2018-01-11 21:57:44.091446"], ["updated_at", "2018-01-11 21:57:44.091446"]]
+  [1m[35m (18.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "background music"], ["definition", "music intended as an unobtrusive accompaniment to an activity or to provide atmosphere in a film."], ["language", "en"], ["created_at", "2018-01-11 21:57:44.112920"], ["updated_at", "2018-01-11 21:57:44.112920"]]
+  [1m[35m (22.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "baker, dame janet"], ["definition", "(born 1933), English operatic mezzo-soprano; full name Dame Janet Abbott Baker."], ["language", "en"], ["created_at", "2018-01-11 21:57:44.138115"], ["updated_at", "2018-01-11 21:57:44.138115"]]
+  [1m[35m (9.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "ballad"], ["definition", "a poem or song narrating a story in short stanzas. Traditional ballads are typically of unknown authorship, having been passed on orally from one generation to the next."], ["language", "en"], ["created_at", "2018-01-11 21:57:44.149786"], ["updated_at", "2018-01-11 21:57:44.149786"]]
+  [1m[35m (5.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "balladeer"], ["definition", "a singer or composer of ballads."], ["language", "en"], ["created_at", "2018-01-11 21:57:44.156582"], ["updated_at", "2018-01-11 21:57:44.156582"]]
+  [1m[35m (9.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "ballad-monger"], ["definition", "a composer or seller of ballads"], ["language", "en"], ["created_at", "2018-01-11 21:57:44.167736"], ["updated_at", "2018-01-11 21:57:44.167736"]]
+  [1m[35m (19.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "ballad opera"], ["definition", "a theatrical entertainment popular in early 18th-century England, taking the form of a satirical play interspersed with traditional or operatic songs. The best-known example is John Gay's \"The Beggar's Opera\" (1728)."], ["language", "en"], ["created_at", "2018-01-11 21:57:44.193896"], ["updated_at", "2018-01-11 21:57:44.193896"]]
+  [1m[35m (15.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "bandleader"], ["definition", "a player at the head of a musical band."], ["language", "en"], ["created_at", "2018-01-11 21:57:44.215050"], ["updated_at", "2018-01-11 21:57:44.215050"]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "bandmaster"], ["definition", "the conductor of a musical band, especially a brass or military one."], ["language", "en"], ["created_at", "2018-01-11 21:57:44.229730"], ["updated_at", "2018-01-11 21:57:44.229730"]]
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "bandsman"], ["definition", "a player in a musical band, especially a military or brass one."], ["language", "en"], ["created_at", "2018-01-11 21:57:44.239613"], ["updated_at", "2018-01-11 21:57:44.239613"]]
+  [1m[35m (5.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "barcarole"], ["definition", "a song traditionally sung by Venetian gondoliers."], ["language", "en"], ["created_at", "2018-01-11 21:57:44.250869"], ["updated_at", "2018-01-11 21:57:44.250869"]]
+  [1m[35m (19.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "baritone"], ["definition", "an adult male singing voice between tenor and bass"], ["language", "en"], ["created_at", "2018-01-11 21:57:44.276925"], ["updated_at", "2018-01-11 21:57:44.276925"]]
+  [1m[35m (15.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "baritonist"], ["definition", "a person who plays a baritone instrument, in particular a saxophone or a horn."], ["language", "en"], ["created_at", "2018-01-11 21:57:44.298735"], ["updated_at", "2018-01-11 21:57:44.298735"]]
+  [1m[35m (13.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "bar line"], ["definition", "a vertical line used in a musical score to mark a division between bars."], ["language", "en"], ["created_at", "2018-01-11 21:57:44.319221"], ["updated_at", "2018-01-11 21:57:44.319221"]]
+  [1m[35m (9.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "baroque"], ["definition", "relating to or denoting a style of European architecture, music, and art of the 17th and 18th centuries that followed Mannerism and is characterized by ornate detail. In architecture the period is exemplified by the palace of Versailles and by the work of Wren in England. Major composers include Vivaldi, Bach, and Handel; Caravaggio and Rubens are important baroque artists."], ["language", "en"], ["created_at", "2018-01-11 21:57:44.332059"], ["updated_at", "2018-01-11 21:57:44.332059"]]
+  [1m[35m (7.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "barré"], ["definition", "a method of playing a chord on the guitar or a similar instrument in which one finger is laid across all the strings at a particular fret."], ["language", "en"], ["created_at", "2018-01-11 21:57:44.345091"], ["updated_at", "2018-01-11 21:57:44.345091"]]
+  [1m[35m (18.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "bass"], ["definition", "the lowest adult male singing voice"], ["language", "en"], ["created_at", "2018-01-11 21:57:44.369729"], ["updated_at", "2018-01-11 21:57:44.369729"]]
+  [1m[35m (16.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "bass clef"], ["definition", "a clef placing F below middle C on the second-highest line of the stave."], ["language", "en"], ["created_at", "2018-01-11 21:57:44.392656"], ["updated_at", "2018-01-11 21:57:44.392656"]]
+  [1m[35m (13.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "bassist"], ["definition", "a person who plays a double bass or bass guitar."], ["language", "en"], ["created_at", "2018-01-11 21:57:44.408548"], ["updated_at", "2018-01-11 21:57:44.408548"]]
+  [1m[35m (7.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "bassline"], ["definition", "the lowest part or sequence of notes in a piece of music."], ["language", "en"], ["created_at", "2018-01-11 21:57:44.417738"], ["updated_at", "2018-01-11 21:57:44.417738"]]
+  [1m[35m (5.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "bass note"], ["definition", "a low note played on a musical instrument or sung by a singer"], ["language", "en"], ["created_at", "2018-01-11 21:57:44.424515"], ["updated_at", "2018-01-11 21:57:44.424515"]]
+  [1m[35m (40.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "basso"], ["definition", "a bass voice or vocal part."], ["language", "en"], ["created_at", "2018-01-11 21:57:44.466875"], ["updated_at", "2018-01-11 21:57:44.466875"]]
+  [1m[35m (17.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "basso profundo"], ["definition", "a bass singer with an exceptionally low range."], ["language", "en"], ["created_at", "2018-01-11 21:57:44.488806"], ["updated_at", "2018-01-11 21:57:44.488806"]]
+  [1m[35m (15.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "baton"], ["definition", "a thin stick used by a conductor to direct an orchestra or choir."], ["language", "en"], ["created_at", "2018-01-11 21:57:44.505857"], ["updated_at", "2018-01-11 21:57:44.505857"]]
+  [1m[35m (9.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "beat time"], ["definition", "indicate or follow a musical tempo with a baton or other means."], ["language", "en"], ["created_at", "2018-01-11 21:57:44.517795"], ["updated_at", "2018-01-11 21:57:44.517795"]]
+  [1m[35m (14.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "bel canto"], ["definition", "a lyrical style of operatic singing using a full, rich, broad tone and smooth phrasing"], ["language", "en"], ["created_at", "2018-01-11 21:57:44.538724"], ["updated_at", "2018-01-11 21:57:44.538724"]]
+  [1m[35m (13.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "bellows"], ["definition", "a device with an air bag that emits a stream of air when squeezed together with two handles, used for blowing air into a fire"], ["language", "en"], ["created_at", "2018-01-11 21:57:44.553563"], ["updated_at", "2018-01-11 21:57:44.553563"]]
+  [1m[35m (19.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "berceuse"], ["definition", "a lullaby."], ["language", "en"], ["created_at", "2018-01-11 21:57:44.578506"], ["updated_at", "2018-01-11 21:57:44.578506"]]
+  [1m[35m (15.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "bis"], ["definition", "(as a direction) again."], ["language", "en"], ["created_at", "2018-01-11 21:57:44.607923"], ["updated_at", "2018-01-11 21:57:44.607923"]]
+  [1m[35m (8.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "entries" ("word", "definition", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "bitonal"], ["definition", "(of music) having parts in two different keys sounding together."], ["language", "en"], ["created_at", "2018-01-11 21:57:44.623042"], ["updated_at", "2018-01-11 21:57:44.623042"]]
+  [1m[35m (10.3ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/entries" for 127.0.0.1 at 2018-01-12 14:00:59 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant EntriesController):
+  
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:269:in `const_get'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:269:in `block in constantize'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `constantize'
+actionpack (5.1.4) lib/action_dispatch/http/request.rb:85:in `controller_class_for'
+actionpack (5.1.4) lib/action_dispatch/http/request.rb:78:in `controller_class'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/entries" for 127.0.0.1 at 2018-01-12 14:13:08 -0500
+  
+ActionController::RoutingError (uninitialized constant EntriesController):
+  
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:269:in `const_get'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:269:in `block in constantize'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `constantize'
+actionpack (5.1.4) lib/action_dispatch/http/request.rb:85:in `controller_class_for'
+actionpack (5.1.4) lib/action_dispatch/http/request.rb:78:in `controller_class'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/entries" for 127.0.0.1 at 2018-01-12 14:17:14 -0500
+  
+ActionController::RoutingError (uninitialized constant EntriesController):
+  
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:269:in `const_get'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:269:in `block in constantize'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `constantize'
+actionpack (5.1.4) lib/action_dispatch/http/request.rb:85:in `controller_class_for'
+actionpack (5.1.4) lib/action_dispatch/http/request.rb:78:in `controller_class'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[36mEntry Load (1.1ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mEntry Load (0.6ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" ORDER BY "entries"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mEntry Load (0.8ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" ORDER BY "entries"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/entries/1" for 127.0.0.1 at 2018-01-12 14:33:29 -0500
+  
+ActionController::RoutingError (uninitialized constant EntriesController):
+  
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:269:in `const_get'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:269:in `block in constantize'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `constantize'
+actionpack (5.1.4) lib/action_dispatch/http/request.rb:85:in `controller_class_for'
+actionpack (5.1.4) lib/action_dispatch/http/request.rb:78:in `controller_class'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/entries/1" for 127.0.0.1 at 2018-01-12 14:34:48 -0500
+  
+ActionController::RoutingError (uninitialized constant EntriesController):
+  
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:269:in `const_get'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:269:in `block in constantize'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `constantize'
+actionpack (5.1.4) lib/action_dispatch/http/request.rb:85:in `controller_class_for'
+actionpack (5.1.4) lib/action_dispatch/http/request.rb:78:in `controller_class'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/entries/71" for 127.0.0.1 at 2018-01-12 14:34:55 -0500
+  
+ActionController::RoutingError (uninitialized constant EntriesController):
+  
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:269:in `const_get'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:269:in `block in constantize'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `constantize'
+actionpack (5.1.4) lib/action_dispatch/http/request.rb:85:in `controller_class_for'
+actionpack (5.1.4) lib/action_dispatch/http/request.rb:78:in `controller_class'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/entries/79" for 127.0.0.1 at 2018-01-12 14:35:01 -0500
+  
+ActionController::RoutingError (uninitialized constant EntriesController):
+  
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:269:in `const_get'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:269:in `block in constantize'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `constantize'
+actionpack (5.1.4) lib/action_dispatch/http/request.rb:85:in `controller_class_for'
+actionpack (5.1.4) lib/action_dispatch/http/request.rb:78:in `controller_class'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/entries/79" for 127.0.0.1 at 2018-01-12 14:36:29 -0500
+  
+SyntaxError (/home/pc/Desktop/bitmaker/projects/test jan 10 ex3 final/wdi_restful_dictionary/config/routes.rb:17: syntax error, unexpected ':', expecting keyword_end
+entry GET    /entries/:id(.:format)      entries#show
+                       ^):
+  
+config/routes.rb:17: syntax error, unexpected ':', expecting keyword_end
+Started GET "/entries/79" for 127.0.0.1 at 2018-01-12 14:39:48 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/entries/79"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/entries/79" for 127.0.0.1 at 2018-01-12 14:40:12 -0500
+  
+ActionController::RoutingError (uninitialized constant EntriesController):
+  
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:269:in `const_get'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:269:in `block in constantize'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `constantize'
+actionpack (5.1.4) lib/action_dispatch/http/request.rb:85:in `controller_class_for'
+actionpack (5.1.4) lib/action_dispatch/http/request.rb:78:in `controller_class'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/entries/79" for 127.0.0.1 at 2018-01-12 14:42:23 -0500
+  
+LoadError (Unable to autoload constant EntriesController, expected /home/pc/Desktop/bitmaker/projects/test jan 10 ex3 final/wdi_restful_dictionary/app/controllers/entries_controller.rb to define it):
+  
+activesupport (5.1.4) lib/active_support/dependencies.rb:511:in `load_missing_constant'
+activesupport (5.1.4) lib/active_support/dependencies.rb:202:in `const_missing'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:269:in `const_get'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:269:in `block in constantize'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `constantize'
+activesupport (5.1.4) lib/active_support/dependencies.rb:582:in `get'
+activesupport (5.1.4) lib/active_support/dependencies.rb:613:in `constantize'
+actionpack (5.1.4) lib/action_dispatch/http/request.rb:85:in `controller_class_for'
+actionpack (5.1.4) lib/action_dispatch/http/parameters.rb:99:in `binary_params_for?'
+actionpack (5.1.4) lib/action_dispatch/http/parameters.rb:90:in `set_binary_encoding'
+actionpack (5.1.4) lib/action_dispatch/http/parameters.rb:67:in `path_parameters='
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:48:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/entries/79" for 127.0.0.1 at 2018-01-12 14:42:54 -0500
+Processing by EntriesController#show as HTML
+  Parameters: {"id"=>"79"}
+  Rendering entries/show.html.erb within layouts/application
+  Rendered entries/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 666ms (Views: 665.9ms)
+
+
+Started GET "/entries/79" for 127.0.0.1 at 2018-01-12 15:36:50 -0500
+Processing by EntriesController#show as HTML
+  Parameters: {"id"=>"79"}
+  Rendering entries/show.html.erb within layouts/application
+  Rendered entries/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 20ms (Views: 19.4ms)
+
+
+Started GET "/entries/79" for 127.0.0.1 at 2018-01-12 16:19:00 -0500
+  
+SyntaxError (/home/pc/Desktop/bitmaker/projects/test jan 10 ex3 final/wdi_restful_dictionary/app/controllers/entries_controller.rb:13: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/entries_controller.rb:13: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/entries/new" for 127.0.0.1 at 2018-01-12 16:21:51 -0500
+  
+SyntaxError (/home/pc/Desktop/bitmaker/projects/test jan 10 ex3 final/wdi_restful_dictionary/app/controllers/entries_controller.rb:13: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/entries_controller.rb:13: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/entries/new" for 127.0.0.1 at 2018-01-12 16:22:11 -0500
+Processing by EntriesController#new as HTML
+  Rendering entries/new.html.erb within layouts/application
+  Rendered entries/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 32ms (Views: 30.7ms)
+
+
+Started GET "/entries/edit/1" for 127.0.0.1 at 2018-01-12 16:33:12 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/entries/edit/1"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/entries/edit/" for 127.0.0.1 at 2018-01-12 16:34:39 -0500
+Processing by EntriesController#show as HTML
+  Parameters: {"id"=>"edit"}
+  Rendering entries/show.html.erb within layouts/application
+  Rendered entries/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 22ms (Views: 21.5ms)
+
+
+Started GET "/entries/edit/1" for 127.0.0.1 at 2018-01-12 16:34:48 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/entries/edit/1"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/entries/edit/" for 127.0.0.1 at 2018-01-12 16:34:53 -0500
+Processing by EntriesController#show as HTML
+  Parameters: {"id"=>"edit"}
+  Rendering entries/show.html.erb within layouts/application
+  Rendered entries/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 18ms (Views: 17.4ms)
+
+
+Started GET "/entries" for 127.0.0.1 at 2018-01-16 17:14:06 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EntriesController#index as HTML
+  [1m[36mEntry Load (0.5ms)[0m  [1m[34mSELECT "entries".* FROM "entries"[0m
+  Rendering entries/index.html.erb within layouts/application
+  Rendered entries/index.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 1.0ms)
+
+
+  
+SyntaxError (/home/pc/Desktop/bitmaker/projects/test jan 11 ex3 final /wdi_restful_dictionary/app/views/entries/index.html.erb:5: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+ "New word?"  , new entry_path(@entry));@output_buffer.safe_
+                              ^
+/home/pc/Desktop/bitmaker/projects/test jan 11 ex3 final /wdi_restful_dictionary/app/views/entries/index.html.erb:7: syntax error, unexpected keyword_do_block, expecting keyword_end
+!-- '.freeze; @entries.each do |entry| ;@output_buffer.safe_
+                              ^
+/home/pc/Desktop/bitmaker/projects/test jan 11 ex3 final /wdi_restful_dictionary/app/views/entries/index.html.erb:8: syntax error, unexpected keyword_do_block, expecting keyword_end
+'.freeze;  @entries.each do |entry|
+                           ^
+/home/pc/Desktop/bitmaker/projects/test jan 11 ex3 final /wdi_restful_dictionary/app/views/entries/index.html.erb:15: syntax error, unexpected keyword_end, expecting end-of-input
+'.freeze; end 
+             ^):
+  
+app/views/entries/index.html.erb:5: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+app/views/entries/index.html.erb:7: syntax error, unexpected keyword_do_block, expecting keyword_end
+app/views/entries/index.html.erb:8: syntax error, unexpected keyword_do_block, expecting keyword_end
+app/views/entries/index.html.erb:15: syntax error, unexpected keyword_end, expecting end-of-input
+Started GET "/entries" for 127.0.0.1 at 2018-01-16 17:21:33 -0500
+Processing by EntriesController#index as HTML
+  [1m[36mEntry Load (0.8ms)[0m  [1m[34mSELECT "entries".* FROM "entries"[0m
+  Rendering entries/index.html.erb within layouts/application
+  Rendered entries/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 1.3ms)
+
+
+  
+SyntaxError (/home/pc/Desktop/bitmaker/projects/test jan 11 ex3 final /wdi_restful_dictionary/app/views/entries/index.html.erb:5: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+ "New word?"  , new entry_path(@entry));@output_buffer.safe_
+                              ^
+/home/pc/Desktop/bitmaker/projects/test jan 11 ex3 final /wdi_restful_dictionary/app/views/entries/index.html.erb:7: syntax error, unexpected keyword_do_block, expecting keyword_end
+!-- '.freeze; @entries.each do |entry| ;@output_buffer.safe_
+                              ^
+/home/pc/Desktop/bitmaker/projects/test jan 11 ex3 final /wdi_restful_dictionary/app/views/entries/index.html.erb:8: syntax error, unexpected keyword_do_block, expecting keyword_end
+-- '.freeze;  @entries.each do |entry|;@output_buffer.safe_a
+                              ^
+/home/pc/Desktop/bitmaker/projects/test jan 11 ex3 final /wdi_restful_dictionary/app/views/entries/index.html.erb:15: syntax error, unexpected keyword_end, expecting end-of-input
+'.freeze; end ;@output_buffer.safe_append='
+             ^):
+  
+app/views/entries/index.html.erb:5: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+app/views/entries/index.html.erb:7: syntax error, unexpected keyword_do_block, expecting keyword_end
+app/views/entries/index.html.erb:8: syntax error, unexpected keyword_do_block, expecting keyword_end
+app/views/entries/index.html.erb:15: syntax error, unexpected keyword_end, expecting end-of-input
+Started GET "/entries" for 127.0.0.1 at 2018-01-16 17:22:23 -0500
+Processing by EntriesController#index as HTML
+  [1m[36mEntry Load (0.6ms)[0m  [1m[34mSELECT "entries".* FROM "entries"[0m
+  Rendering entries/index.html.erb within layouts/application
+  Rendered entries/index.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.6ms)
+
+
+  
+SyntaxError (/home/pc/Desktop/bitmaker/projects/test jan 11 ex3 final /wdi_restful_dictionary/app/views/entries/index.html.erb:5: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+ "New word?"  , new entry_path(@entry));@output_buffer.safe_
+                              ^
+/home/pc/Desktop/bitmaker/projects/test jan 11 ex3 final /wdi_restful_dictionary/app/views/entries/index.html.erb:7: syntax error, unexpected keyword_do_block, expecting keyword_end
+!-- '.freeze; @entries.each do |entry| ;@output_buffer.safe_
+                              ^
+/home/pc/Desktop/bitmaker/projects/test jan 11 ex3 final /wdi_restful_dictionary/app/views/entries/index.html.erb:8: syntax error, unexpected keyword_do_block, expecting keyword_end
+-- '.freeze;  @entries.each do |entry|;@output_buffer.safe_a
+                              ^
+/home/pc/Desktop/bitmaker/projects/test jan 11 ex3 final /wdi_restful_dictionary/app/views/entries/index.html.erb:15: syntax error, unexpected keyword_end, expecting end-of-input
+'.freeze; end ;@output_buffer.safe_append='
+             ^):
+  
+app/views/entries/index.html.erb:5: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+app/views/entries/index.html.erb:7: syntax error, unexpected keyword_do_block, expecting keyword_end
+app/views/entries/index.html.erb:8: syntax error, unexpected keyword_do_block, expecting keyword_end
+app/views/entries/index.html.erb:15: syntax error, unexpected keyword_end, expecting end-of-input
+Started GET "/entries" for 127.0.0.1 at 2018-01-16 17:25:22 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EntriesController#index as HTML
+  [1m[36mEntry Load (0.5ms)[0m  [1m[34mSELECT "entries".* FROM "entries"[0m
+  Rendering entries/index.html.erb within layouts/application
+  Rendered entries/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 1.1ms)
+
+
+  
+SyntaxError (/home/pc/Desktop/bitmaker/projects/test jan 11 ex3 final /wdi_restful_dictionary/app/views/entries/index.html.erb:5: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+ "New word?"  , new entry_path(@entry));@output_buffer.safe_
+                              ^
+/home/pc/Desktop/bitmaker/projects/test jan 11 ex3 final /wdi_restful_dictionary/app/views/entries/index.html.erb:7: syntax error, unexpected keyword_do_block, expecting keyword_end
+!-- '.freeze; @entries.each do |entry| ;@output_buffer.safe_
+                              ^
+/home/pc/Desktop/bitmaker/projects/test jan 11 ex3 final /wdi_restful_dictionary/app/views/entries/index.html.erb:8: syntax error, unexpected keyword_do_block, expecting keyword_end
+-- '.freeze;  @entries.each do |entry|;@output_buffer.safe_a
+                              ^
+/home/pc/Desktop/bitmaker/projects/test jan 11 ex3 final /wdi_restful_dictionary/app/views/entries/index.html.erb:15: syntax error, unexpected keyword_end, expecting end-of-input
+'.freeze; end ;@output_buffer.safe_append='
+             ^):
+  
+app/views/entries/index.html.erb:5: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+app/views/entries/index.html.erb:7: syntax error, unexpected keyword_do_block, expecting keyword_end
+app/views/entries/index.html.erb:8: syntax error, unexpected keyword_do_block, expecting keyword_end
+app/views/entries/index.html.erb:15: syntax error, unexpected keyword_end, expecting end-of-input
+Started GET "/entries" for 127.0.0.1 at 2018-01-16 17:26:42 -0500
+Processing by EntriesController#index as HTML
+  [1m[36mEntry Load (0.9ms)[0m  [1m[34mSELECT "entries".* FROM "entries"[0m
+  Rendering entries/index.html.erb within layouts/application
+  Rendered entries/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 233ms (Views: 226.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/entries/new" for 127.0.0.1 at 2018-01-16 17:26:57 -0500
+Processing by EntriesController#new as HTML
+  Rendering entries/new.html.erb within layouts/application
+  Rendered entries/_entry_form.html.erb (39.0ms)
+  Rendered entries/new.html.erb within layouts/application (40.9ms)
+Completed 200 OK in 77ms (Views: 74.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/entries/1" for 127.0.0.1 at 2018-01-16 17:27:03 -0500
+Processing by EntriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEntry Load (0.4ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE "entries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering entries/show.html.erb within layouts/application
+  Rendered entries/show.html.erb within layouts/application (8.3ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `utitlize' for "absolute music":String
+Did you mean?  titleize):
+    1: <p> This is the show view for entries</p>
+    2: <p>This page will display information about entry number <%= params[:id] %></p>
+    3: 
+    4: <h1><%= @entry.word.utitlize %></h1>
+    5: <p>Definition: <%= @entry.definition.capitalize %></p> <br>
+    6: <h4>Language: <%= @entry.language.upcase %></h4> <br>
+    7: 
+  
+app/views/entries/show.html.erb:4:in `_app_views_entries_show_html_erb__1062454973750955998_70065490285980'
+Started POST "/__web_console/repl_sessions/3e8981f03d86e63275870f1b23642805/trace" for 127.0.0.1 at 2018-01-16 17:27:59 -0500
+Started GET "/entries/1" for 127.0.0.1 at 2018-01-16 17:28:42 -0500
+Processing by EntriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEntry Load (0.2ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE "entries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering entries/show.html.erb within layouts/application
+  Rendered entries/show.html.erb within layouts/application (4.6ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `titlize' for "absolute music":String
+Did you mean?  titleize):
+    1: <p> This is the show view for entries</p>
+    2: <p>This page will display information about entry number <%= params[:id] %></p>
+    3: 
+    4: <h1><%= @entry.word.titlize %></h1>
+    5: <p>Definition: <%= @entry.definition.capitalize %></p> <br>
+    6: <h4>Language: <%= @entry.language.upcase %></h4> <br>
+    7: 
+  
+app/views/entries/show.html.erb:4:in `_app_views_entries_show_html_erb__1062454973750955998_70065491277900'
+Started GET "/entries/1" for 127.0.0.1 at 2018-01-16 17:29:36 -0500
+Processing by EntriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEntry Load (0.2ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE "entries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering entries/show.html.erb within layouts/application
+  Rendered entries/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 18ms (Views: 15.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/entries/1/edit" for 127.0.0.1 at 2018-01-16 17:29:54 -0500
+Processing by EntriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEntry Load (0.2ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE "entries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering entries/edit.html.erb within layouts/application
+  Rendered entries/_entry_form.html.erb (3.0ms)
+  Rendered entries/edit.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 34ms (Views: 32.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/entries" for 127.0.0.1 at 2018-01-16 17:30:08 -0500
+Processing by EntriesController#index as HTML
+  [1m[36mEntry Load (1.1ms)[0m  [1m[34mSELECT "entries".* FROM "entries"[0m
+  Rendering entries/index.html.erb within layouts/application
+  Rendered entries/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 56ms (Views: 49.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/entries/new" for 127.0.0.1 at 2018-01-16 17:30:55 -0500
+Processing by EntriesController#new as HTML
+  Rendering entries/new.html.erb within layouts/application
+  Rendered entries/_entry_form.html.erb (11.3ms)
+  Rendered entries/new.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 41ms (Views: 38.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/entries" for 127.0.0.1 at 2018-01-16 17:30:58 -0500
+Processing by EntriesController#index as HTML
+  [1m[36mEntry Load (0.6ms)[0m  [1m[34mSELECT "entries".* FROM "entries"[0m
+  Rendering entries/index.html.erb within layouts/application
+  Rendered entries/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 40ms (Views: 34.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/entries/2" for 127.0.0.1 at 2018-01-16 17:31:00 -0500
+Processing by EntriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mEntry Load (0.2ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE "entries"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering entries/show.html.erb within layouts/application
+  Rendered entries/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 27ms (Views: 25.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/entries/2" for 127.0.0.1 at 2018-01-16 17:33:09 -0500
+Processing by EntriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mEntry Load (0.2ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE "entries"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering entries/show.html.erb within layouts/application
+  Rendered entries/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 21ms (Views: 18.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/entries" for 127.0.0.1 at 2018-01-16 17:33:14 -0500
+Processing by EntriesController#index as HTML
+  [1m[36mEntry Load (0.8ms)[0m  [1m[34mSELECT "entries".* FROM "entries"[0m
+  Rendering entries/index.html.erb within layouts/application
+  Rendered entries/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 61ms (Views: 55.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/entries/new" for 127.0.0.1 at 2018-01-16 17:34:50 -0500
+Processing by EntriesController#new as HTML
+  Rendering entries/new.html.erb within layouts/application
+  Rendered entries/_entry_form.html.erb (2.9ms)
+  Rendered entries/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 24ms (Views: 22.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/entries/new" for 127.0.0.1 at 2018-01-16 17:34:57 -0500
+Processing by EntriesController#new as HTML
+  Rendering entries/new.html.erb within layouts/application
+  Rendered entries/_entry_form.html.erb (3.2ms)
+  Rendered entries/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 38ms (Views: 36.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/entries" for 127.0.0.1 at 2018-01-16 17:35:00 -0500
+Processing by EntriesController#index as HTML
+  [1m[36mEntry Load (0.8ms)[0m  [1m[34mSELECT "entries".* FROM "entries"[0m
+  Rendering entries/index.html.erb within layouts/application
+  Rendered entries/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 40ms (Views: 33.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/entries/new" for 127.0.0.1 at 2018-01-16 17:35:03 -0500
+Processing by EntriesController#new as HTML
+  Rendering entries/new.html.erb within layouts/application
+  Rendered entries/_entry_form.html.erb (2.9ms)
+  Rendered entries/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 37ms (Views: 35.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/entries/new" for 127.0.0.1 at 2018-01-16 17:35:28 -0500
+Processing by EntriesController#new as HTML
+  Rendering entries/new.html.erb within layouts/application
+  Rendered entries/_entry_form.html.erb (2.7ms)
+  Rendered entries/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 29ms (Views: 27.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/entries" for 127.0.0.1 at 2018-01-16 17:35:32 -0500
+Processing by EntriesController#index as HTML
+  [1m[36mEntry Load (0.4ms)[0m  [1m[34mSELECT "entries".* FROM "entries"[0m
+  Rendering entries/index.html.erb within layouts/application
+  Rendered entries/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 48ms (Views: 42.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/entries" for 127.0.0.1 at 2018-01-16 17:35:32 -0500
+Processing by EntriesController#index as HTML
+  [1m[36mEntry Load (1.0ms)[0m  [1m[34mSELECT "entries".* FROM "entries"[0m
+  Rendering entries/index.html.erb within layouts/application
+  Rendered entries/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 41ms (Views: 35.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/entries/new" for 127.0.0.1 at 2018-01-16 17:35:37 -0500
+Processing by EntriesController#new as HTML
+  Rendering entries/new.html.erb within layouts/application
+  Rendered entries/_entry_form.html.erb (5.9ms)
+  Rendered entries/new.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 64ms (Views: 61.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/entries" for 127.0.0.1 at 2018-01-16 17:35:44 -0500
+Processing by EntriesController#index as HTML
+  [1m[36mEntry Load (0.8ms)[0m  [1m[34mSELECT "entries".* FROM "entries"[0m
+  Rendering entries/index.html.erb within layouts/application
+  Rendered entries/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 77ms (Views: 67.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/entries/new" for 127.0.0.1 at 2018-01-16 17:36:35 -0500
+Processing by EntriesController#new as HTML
+  Rendering entries/new.html.erb within layouts/application
+  Rendered entries/_entry_form.html.erb (3.1ms)
+  Rendered entries/new.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 42ms (Views: 40.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/entries/new" for 127.0.0.1 at 2018-01-16 17:37:34 -0500
+Processing by EntriesController#new as HTML
+  Rendering entries/new.html.erb within layouts/application
+  Rendered entries/_entry_form.html.erb (2.6ms)
+  Rendered entries/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 22ms (Views: 20.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/entries/new" for 127.0.0.1 at 2018-01-16 17:37:50 -0500
+Processing by EntriesController#new as HTML
+  Rendering entries/new.html.erb within layouts/application
+  Rendered entries/_entry_form.html.erb (2.2ms)
+  Rendered entries/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/entries" for 127.0.0.1 at 2018-01-16 17:38:11 -0500
+Processing by EntriesController#index as HTML
+  [1m[36mEntry Load (1.1ms)[0m  [1m[34mSELECT "entries".* FROM "entries"[0m
+  Rendering entries/index.html.erb within layouts/application
+  Rendered entries/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 44ms (Views: 37.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/entries/1" for 127.0.0.1 at 2018-01-16 17:38:17 -0500
+Processing by EntriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEntry Load (0.2ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE "entries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering entries/show.html.erb within layouts/application
+  Rendered entries/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 42ms (Views: 40.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/entries/4" for 127.0.0.1 at 2018-01-16 17:38:26 -0500
+Processing by EntriesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mEntry Load (0.2ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE "entries"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering entries/show.html.erb within layouts/application
+  Rendered entries/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 32ms (Views: 29.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/entries/4" for 127.0.0.1 at 2018-01-16 17:45:21 -0500
+Processing by EntriesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mEntry Load (0.2ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE "entries"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering entries/show.html.erb within layouts/application
+  Rendered entries/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 21ms (Views: 18.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/entries" for 127.0.0.1 at 2018-01-16 17:45:29 -0500
+Processing by EntriesController#index as HTML
+  [1m[36mEntry Load (0.8ms)[0m  [1m[34mSELECT "entries".* FROM "entries"[0m
+  Rendering entries/index.html.erb within layouts/application
+  Rendered entries/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 42ms (Views: 36.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/entries/5" for 127.0.0.1 at 2018-01-16 17:45:31 -0500
+Processing by EntriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mEntry Load (0.2ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE "entries"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering entries/show.html.erb within layouts/application
+  Rendered entries/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 35ms (Views: 31.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/entries/5" for 127.0.0.1 at 2018-01-16 17:49:01 -0500
+Processing by EntriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE "entries"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering entries/show.html.erb within layouts/application
+  Rendered entries/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 24ms (Views: 21.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/entries" for 127.0.0.1 at 2018-01-16 17:49:07 -0500
+Processing by EntriesController#index as HTML
+  [1m[36mEntry Load (0.8ms)[0m  [1m[34mSELECT "entries".* FROM "entries"[0m
+  Rendering entries/index.html.erb within layouts/application
+  Rendered entries/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 41ms (Views: 33.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/entries" for 127.0.0.1 at 2018-01-16 17:51:18 -0500
+Processing by EntriesController#index as HTML
+  [1m[36mEntry Load (0.6ms)[0m  [1m[34mSELECT "entries".* FROM "entries"[0m
+  Rendering entries/index.html.erb within layouts/application
+  Rendered entries/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 33ms (Views: 17.5ms | ActiveRecord: 2.2ms)
+
+

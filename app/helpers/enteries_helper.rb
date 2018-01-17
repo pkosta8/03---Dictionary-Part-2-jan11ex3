@@ -1,0 +1,2 @@
+module EnteriesHelper
+end

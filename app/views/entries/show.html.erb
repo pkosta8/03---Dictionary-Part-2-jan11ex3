@@ -1,0 +1,10 @@
+<p> Show page for entries</p>
+<p>information for entry number<%= params[:id] %></p>
+
+<h1><%= @entry.word.titleize %></h1>
+<p>Definition: <%= @entry.definition.capitalize %></p> <br>
+<h4>Language: <%= @entry.language.upcase %></h4> <br>
+
+<%= link_to "Edit", edit_entry_path(@entry) %>
+<%= link_to "Delete", entry_path(@entry), method: :delete, data: {confirm: "Delete '#{@entry.word}'?"} %>
+<%= link_to "List", entries_path %>
